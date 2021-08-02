@@ -1,0 +1,53 @@
+<section>
+    <form [formGroup]="searchForm">
+        <label>
+            <div class="search-bar">
+                <input type="text" [(ngModel)]="keyWord" formControlName="search"
+                    placeholder="Enter search keywords..." />
+                <!-- <input type="text" (keyup)="search($event)" formControlName="search" placeholder="Enter search keywords..." /> -->
+
+                <button class="button" (click)="search($event)"></button>
+            </div>
+
+
+            <div *ngIf="loading">
+                <p class="search-message">Loading</p>
+                <div class="lds-ellipsis">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+        </label>
+
+    </form>
+
+    <div *ngIf="searchResults">
+        <div class="results">
+
+            <ag-grid-angular style="width: 100%; height: 390px;" class="ag-theme-alpine" [rowData]="paginationElements"
+                [columnDefs]="columnDefs" [defaultColDef]="defaultColDef">
+            </ag-grid-angular>
+
+        </div>
+        <div>
+            <div class="page-nav">
+                <span class="page-previous pointer" (click)="prevPage($event)">
+                    <a tabindex="0" aria-label="Previous page">&lt;&lt; Prev </a>
+                </span>
+                <span class="page-no"> {{ page }} </span>
+                <span class="page-next pointer" (click)="nextPage($event)">
+                    <a tabindex="0" aria-label="Next page"> Next &gt;&gt;</a>
+                </span>
+            </div>
+
+        </div>
+    </div>
+
+    <div *ngIf="errorMessage" class="errorMessage">
+        <h2>Error</h2>
+        <p class="error">{{errorMessage}}</p>
+    </div>
+
+</section>

@@ -1,1 +1,176 @@
 /* You can add global styles to this file, and also import other style files */
+@import "../node_modules/ag-grid-community/dist/styles/ag-grid.css";
+@import "../node_modules/ag-grid-community/dist/styles/ag-theme-alpine.css";
+
+
+body {
+  margin: 0px;
+  padding: 0px;
+  font-family: "Open Sans", Verdana, Geneva, Tahoma, sans-serif;
+  background: #eee;
+}
+
+.header {
+  width: 80%;
+  margin-top: 5px;
+}
+.container {
+  text-align: center;
+}
+
+.results {
+  text-align: left;
+}
+
+input[type="text"] {
+  border-radius: 10px;
+  padding: 8px;
+  border: none;
+  display: inline-block;
+  width: 80%;
+  margin: 25px 0 25px 0;
+  max-width: 600px;
+  -webkit-box-shadow: 0px 10px 21px 0px rgba(214, 214, 214, 1);
+  -moz-box-shadow: 0px 10px 21px 0px rgba(214, 214, 214, 1);
+  box-shadow: 0px 10px 21px 0px rgba(214, 214, 214, 1);
+}
+
+
+
+.button {
+  /* image replacement */
+  border:none;
+  border-radius: 0,10px,10px,0;
+  padding:10px;
+  position: relative;
+  left:-30px;
+  width: 28px;
+  height: 28px;
+  display: inline-block;
+  cursor: pointer;
+  background: url(../src/assets/images/button.png) 0 0 no-repeat;
+
+  /* placing next to input using float or absolute positioning omitted ... */
+}
+
+.search-message {
+  font-size: 2rem;
+  color: rgb(214, 214, 214);
+  margin: 0px;
+}
+
+.results {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.errorMessage h2 {
+  color: red;
+}
+
+.error {
+  padding: 20px;
+  width: 40%;
+  margin: 60px auto;
+  -webkit-box-shadow: 0px 10px 21px 0px rgba(214, 214, 214, 1);
+  -moz-box-shadow: 0px 10px 21px 0px rgba(214, 214, 214, 1);
+  box-shadow: 0px 10px 21px 0px rgba(214, 214, 214, 1);
+  border-radius: 10px;
+}
+
+/**
+    loader
+*/
+.lds-ellipsis {
+  display: inline-block;
+  position: relative;
+  width: 64px;
+  height: 64px;
+}
+
+.lds-ellipsis div {
+  position: absolute;
+  top: 27px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgb(43, 27, 182);
+  animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+
+.lds-ellipsis div:nth-child(1) {
+  left: 6px;
+  animation: lds-ellipsis1 0.6s infinite;
+}
+
+.lds-ellipsis div:nth-child(2) {
+  left: 6px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+
+.lds-ellipsis div:nth-child(3) {
+  left: 26px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+
+.lds-ellipsis div:nth-child(4) {
+  left: 45px;
+  animation: lds-ellipsis3 0.6s infinite;
+}
+
+@keyframes lds-ellipsis1 {
+  0% {
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes lds-ellipsis3 {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(0);
+  }
+}
+
+@keyframes lds-ellipsis2 {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  100% {
+    transform: translate(19px, 0);
+  }
+}
+
+.ag-header-cell-label {
+  justify-content: center;
+}
+
+.page-no {
+  margin: 25px;
+}
+
+.page-nav {
+  padding-top: 6px;
+  font-size: 13px;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.pointer:hover {
+  color: blue;
+}
+
+

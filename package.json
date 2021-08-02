@@ -18,6 +18,12 @@
     "@angular/platform-browser": "~12.1.0",
     "@angular/platform-browser-dynamic": "~12.1.0",
     "@angular/router": "~12.1.0",
+    "@octokit/rest": "^18.7.2",
+    "ag-grid-angular": "^25.3.0",
+    "ag-grid-community": "^25.3.0",
+    "ngx-infinite-scroll": "^10.0.1",
+    "ngx-pagination": "^5.1.1",
+    "octokit": "^1.1.0",
     "rxjs": "~6.6.0",
     "tslib": "^2.2.0",
     "zone.js": "~0.11.4"
